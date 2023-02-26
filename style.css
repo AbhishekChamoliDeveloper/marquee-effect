@@ -1,0 +1,136 @@
+/* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Navbar styles */
+
+nav {
+  background-color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-logo a {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu li:last-child {
+  margin-right: 0;
+}
+
+.nav-menu li a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Hero section styles */
+
+.hero {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.hero-images {
+  display: flex;
+  max-width: 600px;
+  flex-direction: column;
+}
+
+.marquee-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee {
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-images img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  animation: marquee-row-1 10s linear infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+/* Marquee effect styles */
+
+@keyframes marquee-row-1 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Footer styles */
+
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 14px;
+  color: #666;
+}
