@@ -86,7 +86,7 @@ nav {
 .hero-images {
   display: flex;
   max-width: 600px;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .marquee-images {
@@ -95,18 +95,27 @@ nav {
 }
 
 .marquee {
-  height: 700px;
+  height: 500px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
 
-.hero-images img {
+.marquee-up img {
   width: 200px;
   height: 200px;
   margin-right: 20px;
   margin-bottom: 20px;
   animation: marquee-row-1 10s linear infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.marquee-down img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  animation: marquee-row-2 10s linear infinite;
   animation-delay: calc(0.2s * var(--i));
 }
 
@@ -118,6 +127,15 @@ nav {
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes marquee-row-2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
   }
 }
 
